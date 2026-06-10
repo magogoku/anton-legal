@@ -156,6 +156,7 @@
         <li>Gender;</li>
         <li>Height (in centimeters);</li>
         <li>City and country of residence as specified by the User in the questionnaire;</li>
+        <li>Approximate geographic coordinates (latitude and longitude) of the <strong>centre of the locality selected</strong> by the User (via geocoding), used solely to calculate distance for candidate matching. The App <strong>does not request device location permissions</strong>, does not track the User's location in real time, and does not update coordinates automatically from the device;</li>
         <li>Photos uploaded by the User to their profile;</li>
         <li>Answers to psychological relationship and preference questions;</li>
         <li>Languages spoken by the User;</li>
@@ -233,11 +234,11 @@
       <p>6.3. Retention periods:</p>
       <ul>
         <li><strong>While the account is active:</strong> personal data is processed and retained throughout the existence of the User's account.</li>
-        <li><strong>After you close your account:</strong> you can no longer sign in; your profile is hidden from others. Identifying personal data is anonymised and deleted within 30 (thirty) calendar days, except data we must or may retain under applicable law (including chat content and metadata — see below).</li>
-        <li><strong>Chat messages:</strong> in accordance with the requirements of Federal Law No. 374-FZ, messages are stored for 6 (six) months from the date of transmission, including after account deletion.</li>
+        <li><strong>After you close your account:</strong> access ends <strong>immediately</strong>; your profile is hidden from others. Identifying personal data (including your email) is <strong>anonymised without undue delay</strong>. Full deletion of remaining records that are not subject to mandatory retention is performed automatically — typically within 30 (thirty) calendar days, but <strong>no later than 3 (three) years</strong> after closure where applicable law requires a longer period (including chat metadata — see below).</li>
+        <li><strong>Chat messages:</strong> in accordance with Federal Law No. 374-FZ, <strong>message text</strong> is retained for up to 6 (six) months from transmission; after that, text is deleted (cleared), including after account closure. <strong>Metadata</strong> (fact, time, participant identifiers) may be kept longer — see the next item.</li>
         <li><strong>Metadata:</strong> in accordance with Federal Law No. 374-FZ, metadata is stored for 3 (three) years from the date of generation.</li>
         <li><strong>Technical logs and security data:</strong> retained for no more than 3 (three) years from the date of last User activity.</li>
-        <li><strong>Verification data:</strong> verification photos are retained for the duration of the account and deleted together with it within 30 days of account deletion.</li>
+        <li><strong>Verification data:</strong> verification photos and related records are kept while the account exists; after closure they are deleted together with profile anonymisation within the periods stated under account closure above (including up to 3 years where required by law).</li>
         <li><strong>OTP codes:</strong> stored for no more than 15 (fifteen) minutes and automatically deleted upon expiry or successful use.</li>
       </ul>
 
@@ -267,7 +268,7 @@
 
     <div class="section">
       <h2>8. Disclosure of Personal Data to Third Parties</h2>
-      <p>8.1. The Operator does not sell, transfer, or disclose personal data to third parties, except as described in this section.</p>
+      <p>8.1. The Operator does not sell personal information and does not sell, transfer, or disclose personal data to third parties, except as described in this section.</p>
 
       <p>8.2. Personal data may be disclosed in the following cases:</p>
 
@@ -279,7 +280,8 @@
       <h3>8.2.2. Service providers:</h3>
       <ul>
         <li>The Operator may engage third-party organisations to support App operation (hosting providers, email delivery services, push notification services, etc.). Such organisations access personal data only to the extent necessary to perform their functions and are required to maintain its confidentiality.</li>
-        <li>Push notifications are delivered via Firebase Cloud Messaging (FCM) by Google LLC. Firebase Privacy Policy: <a href="https://firebase.google.com/support/privacy" target="_blank">https://firebase.google.com/support/privacy</a></li>
+        <li>Push notifications are delivered via Firebase Cloud Messaging (FCM) by Google LLC. Firebase Privacy Policy: <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></li>
+        <li>One-time authentication codes (OTP) and service emails may be sent via an email delivery provider (including Google LLC / Gmail infrastructure). Google Privacy Policy: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
       </ul>
 
       <h3>8.2.3. Legal requirements:</h3>
@@ -299,7 +301,7 @@
         <li>Advisor opinions about the User, if added to the profile, are visible to candidates in the matching feed. The User may delete any advisor opinion at any time.</li>
       </ul>
 
-      <p>8.3. Cross-border transfers of personal data occur only where the receiving party offers an adequate level of data protection (GDPR adequacy decisions, standard contractual clauses, or CCPA/CPRA-compliant vendor agreements).</p>
+      <p>8.3. Cross-border transfers occur only when international service providers are used (including Firebase Cloud Messaging and email delivery services) where processing is necessary for the App to function and the provider offers an adequate level of data protection (GDPR adequacy decisions, standard contractual clauses, or CCPA/CPRA-compliant vendor agreements).</p>
     </div>
 
     <div class="section">
@@ -350,7 +352,7 @@
 
         <li><strong>Data portability / access</strong> — receive a copy of your personal data via <strong>Export data</strong> in App settings (JSON including account, profile, subscription, chats, devices, reports, verification, and related metadata), or by emailing anton.help.app@gmail.com. Messages beyond retention periods may be omitted.</li>
 
-        <li><strong>Erasure</strong> — you may <strong>close your account</strong> in App settings at any time. Identifying data is deleted or anonymised within 30 days; some anonymised records (including chat archives) may be retained for periods required by applicable law, then deleted.</li>
+        <li><strong>Erasure</strong> — you may <strong>close your account</strong> in App settings at any time. Access ends immediately; identifying data is anonymised without undue delay. Some records (including chat metadata) may be retained for periods required by applicable law (Section 6, up to 3 years), then deleted.</li>
 
         <li><strong>Restriction of processing</strong> — to request a temporary restriction on the processing of your data in circumstances provided for by applicable law.</li>
 
@@ -371,7 +373,7 @@
       <p>12.2. Measures in place include:</p>
       <ul>
         <li>Encryption of data in transit using HTTPS/TLS protocols;</li>
-        <li>Encrypted storage of passwords and access tokens;</li>
+        <li>Secure storage of access tokens, refresh tokens, and one-time codes (OTP); sign-in uses OTP — passwords are not used;</li>
         <li>Secure data backups;</li>
         <li>Restricted access to personal data on a need-to-know basis;</li>
         <li>Two-factor authentication for administrative panel access;</li>
